@@ -4,31 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RateXpert</title>
-  <link rel="stylesheet"typ="css" href="./css/home.css">
-  <link rel="icon" type="imgae/jpeg" href="./img/favicon.jpeg">
+  <link rel="stylesheet" href="./css/home.css"> <!-- Corrected rel attribute -->
+  <link rel="icon" type="image/png" href="./img/favicon.png"> <!-- Corrected type attribute -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="navbar-content">
-      <div class="website-name">RateXpert</div>
+      <div class="logo">
+        <img src="./img/Site_logo.png" alt="RateXpert Logo" class="site-logo"> <!-- Site Logo -->
+      </div>
       <div class="search-bar">
         <input type="text" placeholder="Search for products...">
         <button><i class="fas fa-search"></i></button>
       </div>
       <div class="nav-icons">
         <a href="#" class="wishlist"><i class="fas fa-heart"></i></a>
-        <a href="#" class="login">Login</a>
+        <a href="./pages/login_p.html" class="login">Login</a>
       </div>
     </div>
   </nav>
 
-  
-<!-- Category Menu -->
-<div class="category-menu">
+  <!-- Category Menu -->
+  <div class="category-menu">
     <ul>
-      <!-- All Categories Dropdown added here -->
       <li class="dropdown">
         <button class="dropbtn">All Categories <i class="fas fa-caret-down"></i></button>
         <div class="dropdown-content">
@@ -48,35 +48,34 @@
       <li><a href="#">Accessories</a></li>
     </ul>
   </div>
-  
 
   <!-- Main Content -->
   <main class="product-grid">
     <div class="product-card">
-      <img src="https://via.placeholder.com/200" alt="Product Image">
+      <img src="https://via.placeholder.com/200" alt="Product Image 1">
       <h3>Product Name 1</h3>
       <div class="rating">★★★★☆</div>
     </div>
     <div class="product-card">
-      <img src="https://via.placeholder.com/200" alt="Product Image">
+      <img src="https://via.placeholder.com/200" alt="Product Image 2">
       <h3>Product Name 2</h3>
       <div class="rating">★★★☆☆</div>
     </div>
     <div class="product-card">
-      <img src="https://via.placeholder.com/200" alt="Product Image">
+      <img src="https://via.placeholder.com/200" alt="Product Image 3">
       <h3>Product Name 3</h3>
       <div class="rating">★★★★★</div>
     </div>
     <div class="product-card">
-        <img src="https://via.placeholder.com/200" alt="Product Image">
-        <h3>Product Name 4</h3>
-        <div class="rating">★★★★★</div>
-      </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/200" alt="Product Image">
-        <h3>Product Name 5</h3>
-        <div class="rating">★★★★★</div>
-      </div>
+      <img src="https://via.placeholder.com/200" alt="Product Image 4">
+      <h3>Product Name 4</h3>
+      <div class="rating">★★★★★</div>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200" alt="Product Image 5">
+      <h3>Product Name 5</h3>
+      <div class="rating">★★★★★</div>
+    </div>
     <!-- Add more product cards as needed -->
   </main>
 
@@ -84,20 +83,17 @@
     document.addEventListener("DOMContentLoaded", function () {
       const element = document.querySelector(".category-menu");
       const icon = document.querySelector(".dropbtn i");
-  
+
       element.addEventListener("mouseover", function () {
         icon.classList.remove("fa-caret-down");
         icon.classList.add("fa-caret-up");
       });
-  
+
       element.addEventListener("mouseout", function () {
         icon.classList.remove("fa-caret-up");
         icon.classList.add("fa-caret-down");
       });
     });
   </script>
-  
-
-
 </body>
 </html>
