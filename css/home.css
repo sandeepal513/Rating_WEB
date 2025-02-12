@@ -176,6 +176,7 @@ body {
   padding: 20px;
   max-width: 80%;
   margin: 20px auto;
+  min-height: 80vh;
 }
 
 .product-card {
@@ -285,4 +286,114 @@ body {
   .search-bar input {
     width: 100%; /* Makes input field flexible */
   }
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.footer-links, .newsletter, .social-media {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-links h3, .newsletter h3, .social-media h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-links ul li a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.newsletter h3, .newsletter p {
+  text-align: center;
+}
+
+.newsletter form {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  font-size: 14px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #cc7a00;
+}
+
+.social-media {
+  gap: 15px;
+}
+
+.social-media h3 {
+  text-align: center;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon a{
+  color: #ddd;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #ff9900;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
 }

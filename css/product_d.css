@@ -1,0 +1,403 @@
+    body {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #F5F5F5;
+    }
+    
+    /* Navigation Bar */
+      .navbar {
+        background-color: #000;
+        color: #fff;
+        padding: 10px 20px;
+      }
+      
+      .navbar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .website-name {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+      .logo {
+        flex: 0 0 auto; /* Prevent the logo from growing or shrinking */
+      }
+      
+      .site-logo {
+        height: 60px; /* Set a fixed height for the logo */
+        width: auto; /* Maintain aspect ratio */
+      }
+      
+      .search-bar {
+        display: flex;
+        padding-right: 10px;
+        align-items: center;
+        flex-grow: 1;
+        margin: 0 20px;
+      }
+      
+      .search-bar input {
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 4px 0 0 4px;
+      }
+      
+      .search-bar button {
+        padding: 8px 12px;
+        background-color: #555;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        color: #fff;
+        cursor: pointer;
+      }
+      
+      .nav-icons {
+        display: flex;
+        align-items: center;
+      }
+      
+      .wishlist {
+        color: #fff;
+        font-size: 20px;
+        margin-right: 20px;
+      }
+      
+      .login {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    
+    main {
+        padding: 20px;
+    }
+    
+    .product-overview {
+        display: flex;
+        margin-bottom: 40px;
+    }
+    
+    .product-images {
+        flex: 1;
+        margin-right: 20px;
+        width: 45%;
+    }
+    
+    .main-image {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* Default styles for product-images */
+    .product-images {
+        flex: 1;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the content horizontally */
+        gap: 10px; /* Add spacing between elements */
+        width: 45%;
+    }
+
+    .product-images .main-image {
+        width: 100%; /* Default width */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px; /* Rounded corners */
+        border: 2px solid black;
+    }
+
+
+    /* Responsive styles for screen size 400px < width < 768px */
+    @media (min-width: 400px) and (max-width: 768px) {
+        .product-overview {
+            flex-direction: column;
+        }
+    
+        .product-images {
+            margin-right: 0;
+            width: 80%;
+            align-self: center;
+            padding-bottom: 25px;
+        }
+    
+        .thumbnail-carousel {
+            display: flex;
+        }
+
+        .thumbnail-carousel {
+            display: flex; /* Ensure thumbnails are displayed in a row */
+            overflow-x: auto; /* Enable horizontal scrolling */
+            gap: 10px; /* Add spacing between thumbnails */
+            padding: 10px 0; /* Add some padding */
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: #888 #f1f1f1; /* For Firefox */
+        }
+
+        .thumbnail-carousel img {
+            width: 100px; /* Set a fixed width for thumbnails */
+            height: auto; /* Maintain aspect ratio */
+            border: 2px solid #ddd; /* Add a border */
+            border-radius: 8px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+            flex-shrink: 0; /* Prevent thumbnails from shrinking */
+        }
+
+        .thumbnail-carousel img:hover {
+            border-color: #007bff; /* Change border color on hover */
+        }
+
+        /* Custom scrollbar for Webkit browsers (Chrome, Safari, etc.) */
+        .thumbnail-carousel::-webkit-scrollbar {
+            height: 8px; /* Height of the scrollbar */
+        }
+
+        .thumbnail-carousel::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Color of the track */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        .thumbnail-carousel::-webkit-scrollbar-thumb {
+            background: #888; /* Color of the scrollbar */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        .thumbnail-carousel::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Color of the scrollbar on hover */
+        }
+    }
+    
+/* Styles for the thumbnail carousel */
+    .thumbnail-carousel {
+        display: flex; /* Display thumbnails in a row */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        gap: 10px; /* Add spacing between thumbnails */
+        padding: 10px 0; /* Add some padding */
+        scrollbar-width: thin; /* For Firefox */
+        scrollbar-color: #888 #f1f1f1; /* For Firefox */
+        width: 100%;
+    }
+
+    /* Custom scrollbar for Webkit browsers (Chrome, Safari, etc.) */
+    .thumbnail-carousel::-webkit-scrollbar {
+        height: 8px; /* Height of the scrollbar */
+    }
+
+    .thumbnail-carousel::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Color of the track */
+        border-radius: 4px; /* Rounded corners */
+    }
+
+    .thumbnail-carousel::-webkit-scrollbar-thumb {
+        background: #888; /* Color of the scrollbar */
+        border-radius: 4px; /* Rounded corners */
+    }
+
+    .thumbnail-carousel::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Color of the scrollbar on hover */
+    }
+
+    /* Styles for the thumbnail images */
+    .thumbnail-carousel img {
+        width: 30%; /* Set a fixed width for thumbnails */
+        height: auto; /* Maintain aspect ratio */
+        border: 2px solid #ddd; /* Add a border */
+        border-radius: 8px; /* Rounded corners */
+        cursor: pointer; /* Change cursor to pointer on hover */
+        transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+        border: 2px solid black;
+    }
+
+    .thumbnail-carousel img:hover {
+        border-color: #007bff; /* Change border color on hover */
+    }
+    
+    .product-details {
+        flex: 2;
+    }
+    
+    .product-title {
+        font-size: 28px;
+        margin: 0;
+    }
+    
+    .price {
+        font-size: 24px;
+        color: #4CAF50;
+        margin: 10px 0;
+    }
+    
+    .expert-rating {
+        margin: 10px 0;
+    }
+    
+    .specifications {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .specifications li {
+        margin: 5px 0;
+    }
+    
+    .buy-button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .user-interaction {
+        margin-top: 40px;
+    }
+    
+    .reviews {
+        margin-bottom: 20px;
+    }
+    
+    .write-review, .compare-button, .feedback-button {
+        background-color: #003366;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    
+    .related-products {
+        margin-top: 40px;
+    }
+    
+    .product-carousel {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .related-product {
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        width: 30%;
+        text-align: center;
+    }
+    
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.footer-links, .newsletter, .social-media {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-links h3, .newsletter h3, .social-media h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.newsletter h3, .newsletter p {
+    text-align: center;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #cc7a00;
+}
+
+.social-media {
+    gap: 15px;
+}
+
+.social-media h3 {
+    text-align: center;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon a{
+    color: #ddd;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #ff9900;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+}
